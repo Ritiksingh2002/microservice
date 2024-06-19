@@ -27,3 +27,4 @@ public class DepartmentController {
         return new ResponseEntity<>(departmentDto,HttpStatus.OK);
     }
 }
+
