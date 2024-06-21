@@ -32,4 +32,10 @@ public class DepartmentService {
         return savedDepartmentDTo;
 
     }
+
+    public DepartmentDto getbydcode(String dcode) {
+        Department dbycode=departmentRepository.findByDepartmentcode(dcode);
+        DepartmentDto dBycode=new DepartmentDto(dbycode.getId(),dbycode.getDname(),dbycode.getDescription(),dbycode.getDepartmentcode());
+        return dBycode;
+    }
 }

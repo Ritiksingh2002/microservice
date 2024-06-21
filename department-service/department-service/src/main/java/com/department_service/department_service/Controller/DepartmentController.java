@@ -26,5 +26,13 @@ public class DepartmentController {
         DepartmentDto departmentDto= departmentService.getDepartments(Id);
         return new ResponseEntity<>(departmentDto,HttpStatus.OK);
     }
+    @GetMapping("/getDepartment/{dcode}")
+    public ResponseEntity<DepartmentDto> getbydepartmentcode(@PathVariable String dcode){
+
+        DepartmentDto departmentDto= departmentService.getbydcode(dcode);
+        return new ResponseEntity<>(departmentDto,HttpStatus.OK);
+    }
 }
+
+
 
